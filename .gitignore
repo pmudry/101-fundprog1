@@ -1,2 +1,6 @@
 # Project exclude paths
 /out/
+.bloop/
+project/
+target/
+.scala-build/
