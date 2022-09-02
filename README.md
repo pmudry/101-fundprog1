@@ -29,4 +29,4 @@ On pourrait faire cela dans une partie spécifique dans certains labos, genre da
   -	FS en très gros `/tmp` `/dev` `/home`
   -	`ls` `cat` `grep` `find`
   -	`htop`
-- [ ] `git`
+- [ ] `git`, pour celui-ci il y a plusieurs moocs qui font cela, notamment en français celui de la dame de chez Microsoft
