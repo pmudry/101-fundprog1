@@ -1,19 +1,13 @@
 ---
 title: "Labo 1 -- First steps"
+course: "101.1 Programmation impérative"
 author: [Pierre-André Mudry]
 date: "23.7.2022"
 version: "0.7"
-keywords: [Fiche de module, HEI]
-
-programme: "Informatique et systèmes de communication"
-minor: "Tronc commun" # [Ingénierie des données, "Tronc commun"]
-
-language: ["Français"] # ["Français", "Anglais", "Allemand"]
 
 # LaTex specific
 fontsize: 10pt
 caption-justification: centering
-
 ---
 
 # Objectifs et donnée du laboratoire
@@ -21,9 +15,9 @@ caption-justification: centering
 Les objectifs de ce laboratoire sont :
 
 1. se familiariser avec les outils utilisés dans le cours _101.1 Programmation impérative_;
-1. faire vos premiers pas en Scala (si ce n'est pas déjà fait).
+1. faire vos premiers pas en _Scala_ (si ce n'est pas déjà fait);
 
-La durée de laboratoire est de **2 périodes**.
+La durée de laboratoire est de **2 périodes**. Vous aurez l'occasion durant ce premier laboratoire de créer votre premier projet _Scala_ et de faire connaissance avec l'environnement de développement _IntelliJ_.
 
 # Partie 1. Le site web du cours
 
@@ -36,3 +30,27 @@ Effectuez les tâches suivantes :
 2.	Téléchargez les fichiers `RoomCalc.scala` et Input.java et retrouvez ces fichiers sur le disque.
 
 # Partie 2. Environnement de développement
+
+```scala
+package labs.ideas
+
+var length = 30
+var symbol = "▒"
+
+def progress(value: Int) = {
+  require(value >= 1)
+
+  for (i <- 1 to value) {
+    print("[")
+    print(symbol * i)
+    print(" " * (length - i) + "]")
+    Thread.sleep(200)
+    print("\b" * (length + 2))
+  }
+}
+
+@main
+def main() = {
+  progress(10)
+}
+``` 

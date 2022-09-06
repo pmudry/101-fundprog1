@@ -23,6 +23,8 @@ input="../001-Introduction/${file}.md"
 output="../pdf/${file}.pdf"
 echo "Processing with file '${input}'"
 
-pandoc "${input}" -o "${output}" --from markdown+tex_math_dollars+raw_tex --template=iscmodule.tex --listings -V colorlinks --number-sections --lua-filter=lua_filters/attrib-colors.lua --metadata=DRAFT:false
+# pandoc "${input}" -o "${output}" --pdf-engine=xelatex --from markdown+tex_math_dollars+raw_tex --template=iscmodule.tex --highlight-style=kate -V colorlinks --number-sections --lua-filter=lua_filters/attrib-colors.lua --metadata=DRAFT:false
+
+pandoc "${input}" -o "${output}" --pdf-engine=xelatex --from markdown+tex_math_dollars+raw_tex --template=iscmodule.tex --listings -V colorlinks --number-sections --lua-filter=lua_filters/attrib-colors.lua --metadata=DRAFT:false
 
 echo "Output generated in ${output}"

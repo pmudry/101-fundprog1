@@ -189,10 +189,10 @@ $endif$
 $endif$
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[protrusion=true,expansion]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
+% \IfFileExists{microtype.sty}{% use microtype if available
+%   \usepackage[protrusion=true,expansion]{microtype}
+%   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% }{}
 
 $if(indent)$
 $else$
@@ -714,7 +714,7 @@ $if(listings)$
 \definecolor{listing-comment}{HTML}{8E8E8E}
 
 \lstdefinestyle{eisvogel_listing_style}{
-  language         = java,
+  language         = scala,
 $if(listings-disable-line-numbers)$
   xleftmargin      = 0.6em,
   framexleftmargin = 0.4em,
@@ -725,11 +725,11 @@ $else$
 $endif$
   backgroundcolor  = \color{listing-background},
   basicstyle       = \color{listing-text-color}\linespread{1.0}$if(code-block-font-size)$$code-block-font-size$$else$\small$endif$\ttfamily{},
-  breaklines       = true,
+  breaklines       = true,  
   frame            = single,
   framesep         = 0.19em,
   rulecolor        = \color{listing-rule},
-  frameround       = ffff,
+  frameround       = tttt,
   tabsize          = 4,
   numberstyle      = \color{listing-numbers},
   aboveskip        = 1.0em,
@@ -800,6 +800,22 @@ $endif$
   morestring   = [b]",
   morestring   = [b]',
 }
+
+\lstdefinelanguage{scala}{
+  morekeywords={%
+          abstract,case,catch,class,def,do,else,extends,%
+          false,final,finally,for,forSome,if,implicit,import,lazy,%
+          match,new,null,object,override,package,private,protected,%
+          return,sealed,super,this,throw,trait,true,try,type,%
+          val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}[keywords,comments,strings]
 
 \lstdefinelanguage{XML}{
   morestring      = [b]",
@@ -1087,13 +1103,10 @@ $endif$
 \end{tikzpicture}
 
 ~
-\vspace{-14mm}
 
-\begin{center}
-  \Huge{}\textbf{$course$ -- $title$}\\
-  \large{}$title$
-  \normalsize{}
-\end{center}
+{\Huge \bfseries $title$}\\
+{\large $course$\par}
+
 \vspace{1mm}
 
 %% Documentation here : https://github.com/Wandmalfarbe/pandoc-latex-template
