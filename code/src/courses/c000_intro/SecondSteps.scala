@@ -1,6 +1,4 @@
-package courses.c00_intro
-
-import exos.Prout
+package courses.c000_intro
 
 @main
 def begin() = {
