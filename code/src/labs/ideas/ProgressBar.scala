@@ -1,21 +1,21 @@
 package labs.ideas
 
-var length = 30
-var symbol = "▒"
+object ProgressBar extends App {
 
-def progress(value: Int) = {
-  require(value >= 1)
+  def progress(value: Int) = {
+    require(value >= 1)
 
-  for (i <- 1 to value) {
-    print("[")
-    print(symbol * i)
-    print(" " * (length - i) + "]")
-    Thread.sleep(200)
-    print("\b" * (length + 2))
+    var length = value
+    var symbol = "▒"
+
+    for (i <- 1 to length) {
+      print("[")
+      print(symbol * i)
+      print(" " * (length - i) + "]")
+      Thread.sleep(50)
+      print("\b" * (length + 2))
+    }
   }
-}
 
-@main
-def main() = {
-  progress(10)
+  progress(25)
 }

@@ -32,6 +32,15 @@ Le site web du cours sert à assurer l'échange d'informations entre étudiant-e
 
 <y> Je sais pas vraiment s'il faut installer les outils command line ou pas... J'hésite franchement.</y>
 
+<y>
+1. GraalVM install depuis IntelliJ semble possible
+--1. Explication dans intellij
+```
+cs java-home --jvm graalvm-java17  
+cs java --jvm graalvm-java17 --setup
+```
+</y>
+
 1. Allez sur la page (https://docs.scala-lang.org/getting-started/index.html)
 1. Télécharger l'installateur `Scala` pour votre système d'exploitation. Cet installateur de commande s'appelle `Coursier` et c'est lui qui va gérer l'installation des outils pour pouvoir faire du `Scala`. 
 1. Lancez une ligne de commande (TODO expliquer)
