@@ -6,7 +6,7 @@ object FirstSteps extends App {
 
   var t: Int = 0
 
-  for (i <- 1 to 100000)
+  for (i <- 1 to 100002)
     t = t + i
 
   println(t)

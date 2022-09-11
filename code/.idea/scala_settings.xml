@@ -16,4 +16,7 @@
       </map>
     </option>
   </component>
+  <component name="WorksheetDefaultProjectSettings">
+    <option name="makeBeforeRun" value="true" />
+  </component>
 </project>
