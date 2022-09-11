@@ -39,6 +39,9 @@ Le site web du cours sert à assurer l'échange d'informations entre étudiant-e
 cs java-home --jvm graalvm-java17  
 cs java --jvm graalvm-java17 --setup
 ```
+
+https://scala-cli.virtuslab.org/scripting/ ???
+
 </y>
 
 1. Allez sur la page (https://docs.scala-lang.org/getting-started/index.html)

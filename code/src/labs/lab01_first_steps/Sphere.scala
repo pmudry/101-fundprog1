@@ -1,32 +1,36 @@
 package labs.lab01_first_steps
 
-import hevs.utils.Input
+import utils.Input
 
-object Sphere {
-  def main(args: Array[String]) = {
-    var mv = .0
-    var thickness = .0
-    var radius = .0
-    var volume = .0
-    var innerRadius = .0
-    var shellVolume = .0
-    var shellMass = .0
-    var density = .0
-    System.out.println("Please enter outer sphere radius (in cm): ")
-    radius = Input.readDouble
-    volume = radius * radius * radius * Math.PI * 4.0 / 3.0
-    System.out.println("Please enter surface thickness (in cm): ")
-    thickness = Input.readDouble
-    innerRadius = radius - thickness
-    System.out.println("External volume: " + volume + " cm3")
-    System.out.println("Enter material density (in g/cm3): ")
-    mv = Input.readDouble
-    shellVolume = volume - innerRadius * innerRadius * innerRadius * Math.PI * 4.0 / 3.0
-    shellMass = shellVolume * mv
-    density = shellMass / volume
-    if (density > 1.0) System.out.println("Total density: " + density + " => The object doesn't float")
-    else System.out.println("Total density: " + density + " => The object is floating")
-  }}
+/**
+ * Questions :
+ * que se passe-t-il si on ne met pas : Double par exemple ?
+ * il y a visiblement deux manière d'afficher quelque chose sur la consol, lesquuelles ? (c'est la diff entre string
+ * interpolation et la concaténation))
+ */
+
+object Sphere extends App {
+  println("Please enter outer sphere radius (in cm): ")
+  val radius: Double = Input.readDouble
+  val volume: Double = radius * radius * radius * Math.PI * 4.0 / 3.0
+
+  println("Please enter surface thickness (in cm): ")
+  val thickness: Double = Input.readDouble
+  val innerRadius: Double = radius - thickness
+
+  println("External volume: " + volume + " cm3")
+  println("Enter material density (in g/cm3): ")
+
+  val mv: Double = Input.readDouble
+  val shellVolume: Double = volume - innerRadius * innerRadius * innerRadius * Math.PI * 4.0 / 3.0
+  val shellMass: Double = shellVolume * mv
+  val density: Double = shellMass / volume
+
+  if (density > 1.0)
+    println(s"Total density: $density => The object doesn't float")
+  else
+    println(s"Total density: $density => The object is floating")
+}
 
 /*
  *
