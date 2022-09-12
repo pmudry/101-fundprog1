@@ -30,7 +30,7 @@ object Input {
    *
    * @return The typed char
    */
-  def readChar : Char = {
+  def readChar() : Char = {
     var ok = false
     var res = -1
     while (!ok) {
@@ -51,7 +51,7 @@ object Input {
    *
    * @return The typed string
    */
-  def readString : String = {
+  def readString() : String = {
     val stdin = new BufferedReader(new InputStreamReader(System.in))
     try {
       stdin.readLine
@@ -66,8 +66,9 @@ object Input {
    * * Reads a valid integer value from the console.
    *
    * @return The typed integer value
+   * @see Int
    */
-  def readInt : Int = {
+  def readInt() : Int = {
     var ok = false
     var res = -1
 
@@ -87,12 +88,12 @@ object Input {
   }
 
   /**
-   * * Reads a valid double value from the console.
+   * Reads a valid double value from the console.
    *
    * @return The typed double value
-   * @see java.lang.Double
+   * @see Double
    */
-  def readDouble : Double = {
+  def readDouble() : Double = {
     var ok = false
     var res = -1.0
     while (!ok) {
@@ -109,11 +110,11 @@ object Input {
   }
 
   /**
-   * * Reads a valid boolean value from the console.
+   * Reads a valid boolean value from the console.
    *
    * @return the value true if the typed value is true, false otherwise.
    */
-  def readBoolean : Boolean = {
+  def readBoolean() : Boolean = {
     var ok = false
     var res = false
     while ( {

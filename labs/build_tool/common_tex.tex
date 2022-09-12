@@ -10,17 +10,20 @@
 
 % Specific sections formatting
 \titleformat{\section}[block]
-  {\normalfont\large\bfseries\color{darkgray}} % filcenter to center the stuff
+  {\normalfont\Large\bfseries\color{darkgray}} % filcenter to center the stuff
   {}
   {0pt}
   %{\vspace{-6pt}\titlerule \\ \thesection.~}[\titlerule]
-  {\colorbox{Cerulean!15}{\parbox{\textwidth}{\thesection. #1}}}
+  %{\colorbox{Cerulean!15}{\parbox{\textwidth}{\thesection. #1}}}
+  %{\colorbox{Cerulean!15}{\parbox{\textwidth}{#1}\vspace{2pt}}}
+  {\vspace{-6pt}\titlerule \\ #1}[\titlerule]
 
 \titleformat{\subsection}
   {\normalfont\large\bfseries}
   {}
   {0pt}
-  {\titlerule \\ #1 }[\vspace{2pt}\titlerule\vspace{5pt}]
+  {#1}[\vspace{0pt}]
+  %{\thesubsection~#1}[\vspace{2pt}\titlerule\vspace{5pt}]
 
 \titleformat{\subsubsection}
   {\normalfont\bfseries\normalsize\color{magenta}}

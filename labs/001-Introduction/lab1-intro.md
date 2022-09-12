@@ -2,8 +2,8 @@
 title: "Labo 1 -- First steps"
 course: "101.1 Programmation impérative"
 author: [Pierre-André Mudry]
-date: "23.7.2022"
-version: "0.7"
+date: "10.9.2022"
+version: "0.8"
 
 # LaTex specific
 fontsize: 10pt
@@ -24,11 +24,12 @@ Les objectifs de ce laboratoire sont :
 
 La durée de laboratoire est de **2 périodes**. Vous aurez l'occasion durant ce premier laboratoire de créer votre premier projet _Scala_ et de faire connaissance avec l'environnement de développement _IntelliJ_.
 
-# Partie 1. Le site web du cours
+# Partie 1 -- Les outils et la documentation
 
-Le site web du cours sert à assurer l'échange d'informations entre étudiant-e-s et professeur-e-s. Vous y trouverez des informations sur le cours, des anciens examens, les dernières nouvelles… Cette plate-forme est accessible tant à l'intérieur qu’à l'extérieur de la HES-SO Valais. Le site est disponible à l’adresse (https://inf1.begincoding.net)
+## Site web du cours
+Le site web du cours sert à assurer l'échange d'informations entre étudiant-e-s et professeur-e-s. Vous y trouverez des informations sur le cours, des anciens examens, les dernières nouvelles… Cette plate-forme est accessible tant à l'intérieur qu’à l'extérieur de la HES-SO Valais. Le site est disponible à l’adresse https://inf1.begincoding.net
 
-# Installation des outils
+## Installation des outils
 
 <y> Je sais pas vraiment s'il faut installer les outils command line ou pas... J'hésite franchement.</y>
 
@@ -65,7 +66,6 @@ scala>
 ```
 
 > L'outil `Coursier` est un programme mais qui n'a pas d'interface utilisateur. Vous allez en rencontrer beaucoup dans vos études et dans votre vie de programmeur·euse ! En réalité, la majorité des programmes sont comme cela, sans information visible.
-
 
 ## Tâche 1
 Effectuez les tâches suivantes :
