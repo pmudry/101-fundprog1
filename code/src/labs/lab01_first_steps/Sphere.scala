@@ -10,18 +10,19 @@ import utils.Input
  */
 
 object Sphere extends App {
+
   println("Please enter outer sphere radius (in cm): ")
-  val radius: Double = Input.readDouble
+  val radius: Double = Input.readDouble()
   val volume: Double = radius * radius * radius * Math.PI * 4.0 / 3.0
 
   println("Please enter surface thickness (in cm): ")
-  val thickness: Double = Input.readDouble
+  val thickness: Double = Input.readDouble()
   val innerRadius: Double = radius - thickness
 
   println("External volume: " + volume + " cm3")
   println("Enter material density (in g/cm3): ")
 
-  val mv: Double = Input.readDouble
+  val mv: Double = Input.readDouble()
   val shellVolume: Double = volume - innerRadius * innerRadius * innerRadius * Math.PI * 4.0 / 3.0
   val shellMass: Double = shellVolume * mv
   val density: Double = shellMass / volume

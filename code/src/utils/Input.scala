@@ -6,14 +6,11 @@ import java.io.InputStreamReader
 /**
  * The Class Input allows typing data with the keyboard interactively.
  * The types below are supported by the #Input object
- * <br>
- * - String <br>
- * - Integer <br>
+ * - String
+ * - Integer
  * - Double
- * - Boolean  <br>
- * - Char (character) <br>
- * <br>
- * <br>
+ * - Boolean
+ * - Char (character)
  *
  * @author Pierre-André Mudry
  * @see #readString()

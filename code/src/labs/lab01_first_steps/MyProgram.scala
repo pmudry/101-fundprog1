@@ -6,6 +6,7 @@ package labs.lab01_first_steps
  *
  */
 object MyProgram extends App {
+
   // Declares two values
   val toto: Int = 3
   val titi: Int = 4
