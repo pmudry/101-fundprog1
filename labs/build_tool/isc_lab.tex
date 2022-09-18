@@ -891,7 +891,7 @@ $else$
 \newcommand{\hesfootleft}
   {
     \begin{footnotesize}
-      Dr. Pierre-André Mudry $$\mid$$ \emph{$course$}
+      Dr Pierre-André Mudry $$\mid$$ \emph{$course$}
     \end{footnotesize}
   }
 \newcommand{\hesfootmiddle}
@@ -1138,17 +1138,24 @@ $endif$
 
 % For coping with the logo
 \begin{tikzpicture}[remember picture,overlay]
-	\node[anchor=north east,inner sep=0pt] at ($$(current page.north east)-(1.2cm,0.5cm)$$) {
-    \includegraphics[height=1.8cm]{figs/FR-DE_HEI.pdf}
+	\node[anchor=north east,inner sep=0pt] at ($$(current page.north east)-(1.3cm,0.6cm)$$) {
+    \includegraphics[height=1.9cm]{figs/ISC Logo inline v1.pdf}
 	};
 \end{tikzpicture}
 
-% For coping with the logo
-\begin{tikzpicture}[remember picture,overlay]
-	\node[anchor=north west,inner sep=0pt] at ($$(current page.north west)+(.9cm,-0.3cm)$$) {
-    \includegraphics[height=1.8cm]{figs/ISC_logo_rvb.pdf}
-	};
-\end{tikzpicture}
+% % For coping with the logo
+% \begin{tikzpicture}[remember picture,overlay]
+% 	\node[anchor=north east,inner sep=0pt] at ($$(current page.north east)-(1.2cm,0.5cm)$$) {
+%     \includegraphics[height=1.8cm]{figs/FR-DE_HEI.pdf}
+% 	};
+% \end{tikzpicture}
+
+% % For coping with the logo
+% \begin{tikzpicture}[remember picture,overlay]
+% 	\node[anchor=north west,inner sep=0pt] at ($$(current page.north west)+(.9cm,-0.3cm)$$) {
+%     \includegraphics[height=1.8cm]{figs/ISC_logo_rvb.pdf}
+% 	};
+% \end{tikzpicture}
 
 {\Huge \bfseries $title$}\\
 {\large $course$\par}

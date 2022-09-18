@@ -53,13 +53,15 @@ Maintenant que les outils sont installés, vous allez les utiliser pour écrire 
 1. Choisissez où vous souhaitez mettre ce projet. 
 1. Dans le langage, choisissez **Scala** et comme `Build system` mettez `IntelliJ`.
 
-Vous devez ensuite choisir le JDK, c'est-à-dire la machine virtuelle Java. Cliquez sur la flèche, puis `Download`. Nous allons toujours utiliser une version `17` du JDK et comme machine la version `GraalVM`. Pour le Scala SDK (c'est-à-dire la version de Scala) choisissez **impérativement** une version 2.13 (e.g. 2.13.XX).
+Vous devez ensuite choisir la version du JDK que vous souhaitez utiliser, c'est-à-dire quelle _machine virtuelle_ Java. Pour ce cours, nous utiliserons toutes et tous la même version. 
+
+Pour cela, cliquez sur la flèche, puis `Download`. Choisissez la version `17` du JDK et comme machine  `GraalVM`. Pour le _Scala SDK_ (c'est-à-dire la version de Scala) choisissez **impérativement** une version 2.13 (e.g. 2.13.XX).
 
 ![Menu de création du projet\label{fig_create}](ide1.png){height=8cm}
 
-Merci de ne PAS choisir une version 3.0 de Scala car cette version est encore trop instable pour être utilisée dans notre cours. Avant de cliquer, vérifiez que cela ressemble à ce que vous voyez sur la figure \ref{fig_create}
+Merci de ne PAS choisir une version 3.0 de Scala car pour l'instant cette version est encore trop instable pour être utilisée dans notre cours. Avant de cliquer, vérifiez que cela ressemble à ce que vous voyez sur la figure \ref{fig_create}
 
-Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet devrait maintenant être crée. 
+Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet devrait maintenant être créé. 
 
 ## Tâche 3 : Créer votre premier programme
 
@@ -78,9 +80,8 @@ Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet
 
 ## Tâche 4 : Un petit peu plus compliqué
 
-1. Créez un nouveau programme en faisant à nouveau clic droit sur le dossier `src`. Nommez-le `MyProgram`
+1. Créez un nouveau programme en faisant à nouveau clic droit sur le dossier `src`. Nommez-le `MyProgram`. \newpage
 1. Complétez votre programme pour avoir **exactement** le code suivant.
-
    ```scala
     object MyProgram extends App {
 
@@ -115,9 +116,9 @@ Comme vous l'avez constaté, il est possible d'avoir plusieurs fichiers _Scala_ 
 1. Vous pouvez ensuite cliquer dans la console et entrer les valeurs demandées.
 1. Essayez de comprendre ce qui se passe dans le fichier. Bien que nous n’ayons pas vu ces éléments ensemble, vous ne pouvez pas encore comprendre toutes les finesses mais essayez d’imaginer à quoi peuvent server les différents éléments du programme.
 1) Modifiez le fichier afin :
-   1. D’afficher le message « Volume calculator, by John Doe» (en mettant votre nom à la place de John Doe) au début du programme.
-   1. D’afficher le message « Goodbye and thank you » à la fin de l’exécution du programme.
-   1. Essayez de calculer et afficher le volume en gallons impériaux (une mesure de volume anglaise). Utilisez pour cela l’information qu’un gallon vaut 0.00454609 m3.
+   1. D’afficher le message `Volume calculator, by John Doe` (en mettant votre nom à la place de _John Doe_) au début du programme.
+   1. D’afficher le message `Goodbye and thank you` à la fin de l’exécution du programme.
+   1. Essayez de calculer et afficher le volume en gallons impériaux (une mesure de volume anglaise). Utilisez pour cela l’information qu’un gallon vaut $0.00454609~m^3$.
 
 ## Tâche 4 – Votre consommation d’essence
 1. Ajoutez une nouvelle classe à votre projet (`File -> New Class`) que vous nommerez `Fuel`.
@@ -131,7 +132,7 @@ Comme vous l'avez constaté, il est possible d'avoir plusieurs fichiers _Scala_ 
 
 ## Tâche 5 – Flottaison d'une sphère
 
-Nous voudrions écrire un programme qui permet de déterminer si une sphère en métal creuse flotte si on la plonge dans l'eau. Il doit être possible de choisir la matière qui compose la sphère, l'utilisateur devra donc saisir la masse volumique de cette matière (à titre d'exemple, la masse volumique de l'aluminium est de 2.6 g/cm3).
+Nous voudrions écrire un programme qui permet de déterminer si une sphère en métal creuse flotte si on la plonge dans l'eau. Il doit être possible de choisir la matière qui compose la sphère, l'utilisateur devra donc saisir la masse volumique de cette matière (à titre d'exemple, la masse volumique de l'aluminium est de $2.6~[g/cm^3]$).
 
 L'utilisateur doit donc saisir le **rayon** de la sphère (ici le rayon extérieur), **l'épaisseur de la surface** et la **masse volumique** du matériau utilisé. 
 
@@ -144,6 +145,10 @@ Total outer sphere volume: 14137.1669411540 cm3
 Enter material density (in g/cm3): 2
 Total object density: 0.37392592592592594 => The object is floating
 ```
+
+## Tâche 6 -- Quiz
+
+Allez sur la page web du cours et complétez le premier quiz si vous ne l'avez pas encore fait. N'hésitez pas également à commenter le cours si vous avez vu des choses à modifier ! Merci
 
 <!-- <y> Je sais pas vraiment s'il faut installer les outils command line ou pas... J'hésite franchement.</y>
 
