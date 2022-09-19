@@ -27,7 +27,7 @@ echo "Processing with file '${input}'"
 
 pushd .
 cd '../001-Introduction'
-pandoc "${input}" -o "${output}" --pdf-engine=xelatex --from markdown+tex_math_dollars+raw_tex --template='../build_tool/isc_lab.tex' --listings -V colorlinks --number-sections --metadata=DRAFT:false
+pandoc "${input}" -o "${output}" --pdf-engine=xelatex --from markdown+tex_math_dollars+raw_tex --template='../build_tool/isc_lab.tex' --listings -V colorlinks --number-sections 
 
 echo "Output generated in ${output}"
-popd .
+popd

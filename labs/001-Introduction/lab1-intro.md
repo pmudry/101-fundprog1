@@ -29,19 +29,23 @@ La durée de laboratoire est de **2 périodes**. Vous aurez l'occasion durant ce
 ### Plateforme ISC Learn
 Tous les cours en ISC utilisent la même plateforme pour assurer l'échange d'informations entre étudiant·e·s et professeur·e·s. Celle-ci est disponible sur le lien <https://isc.hevs.ch/learn> et vous devriez avoir reçu vos informations de login par email normalement.
 
-Sur le cours _101.1 Programmation impérative_, vous trouverez des informations sur le cours, des anciens examens, les dernières nouvelles… Cette plate-forme est accessible tant à l'intérieur qu’à l'extérieur de la HES-SO Valais mais avec votre login.
+Sur le cours _101.1 Programmation impérative_, vous trouverez des informations sur le cours, des anciens examens, les dernières nouvelles etc. Cette plate-forme est accessible tant à l'intérieur qu’à l'extérieur de la HES-SO Valais avec vos informations de login.
 
 ## Tâche 1 : Exploration du site web
-1. Trouvez les slides du cours du jours ainsi que la donnée de ce laboratoire au format informatique.
+
+Pour commencer en douceur ce premier laboratoire :
+
+1. Trouvez les slides du cours du jours ainsi que la donnée de ce laboratoire au format informatique;
 1. Téléchargez les fichiers `RoomCalc.scala` et `Input.scala` et retrouvez ces fichiers sur votre disque dur.
+1. Comme vous pouvez le voir, ces fichiers `.scala` sont des fichiers tout à fait normaux qui ne contiennent que du texte. Le code est simplement du texte, l'IDE ne fait que mettre en couleur les choses et nous aider à aller plus vite pour certaines tâches répétitives mais elle n'est pas nécessaire en réalité !
 
 ## Tâche 2 : Installation des outils
 Pour ce cours, nous allons utiliser le langage Scala avec comme éditeur de code _IntelliJ_. Ces deux outils sont disponibles gratuitement en téléchargement pour les principaux systèmes d'exploitation Windows, MacOS ou Linux.
 
 Voici comment procéder à l'installation :
 
-1. Téléchargez et installez [IntelliJ Community Edition](https://www.jetbrains.com/idea/download) en suivant le lien <https://www.jetbrains.com/idea/download>. Durant l'installation, vous pouvez choisir quels plugins installer. Choisissez le **plugin Scala**.
-1. Si vous avez loupé l'installation du plugin ou vous avez déjà une version d'IntelliJ fonctionnelle, vous pouvez télécharger et installer le plugin Scala en suivant les instructions suivantes (cherchez _"Scala"_ dans le menu des plugins)
+1. Téléchargez et installez [IntelliJ Community Edition](https://www.jetbrains.com/idea/download) en suivant le lien <https://www.jetbrains.com/idea/download>.
+1. Lancez __IntelliJ__ et dans le menu de gauche dans la fenêtre de démarrage, installez le plugin __Scala__ 
 
 # Partie 2 -- Premiers pas 
 Maintenant que les outils sont installés, vous allez les utiliser pour écrire votre premier code.
@@ -55,11 +59,11 @@ Maintenant que les outils sont installés, vous allez les utiliser pour écrire 
 
 Vous devez ensuite choisir la version du JDK que vous souhaitez utiliser, c'est-à-dire quelle _machine virtuelle_ Java. Pour ce cours, nous utiliserons toutes et tous la même version. 
 
-Pour cela, cliquez sur la flèche, puis `Download`. Choisissez la version `17` du JDK et comme machine  `GraalVM`. Pour le _Scala SDK_ (c'est-à-dire la version de Scala) choisissez **impérativement** une version 2.13 (e.g. 2.13.XX).
+Pour cela, cliquez sur la flèche, puis `Download`. Choisissez la version `17` du JDK et comme fournisseur de machine virtuelle la machine `Temurin`. Pour le _Scala SDK_ (c'est-à-dire la version de Scala) choisissez **impérativement** une version 2.13 (e.g. 2.13.XX).
 
 ![Menu de création du projet\label{fig_create}](ide1.png){height=8cm}
 
-Merci de ne PAS choisir une version 3.0 de Scala car pour l'instant cette version est encore trop instable pour être utilisée dans notre cours. Avant de cliquer, vérifiez que cela ressemble à ce que vous voyez sur la figure \ref{fig_create}
+Merci de ne PAS choisir une version 3.0 de Scala car, pour l'instant, cette version est encore trop instable pour être utilisée dans notre cours. Avant de cliquer, vérifiez que cela ressemble à ce que vous voyez sur la figure \ref{fig_create}
 
 Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet devrait maintenant être créé. 
 
@@ -82,6 +86,7 @@ Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet
 
 1. Créez un nouveau programme en faisant à nouveau clic droit sur le dossier `src`. Nommez-le `MyProgram`. \newpage
 1. Complétez votre programme pour avoir **exactement** le code suivant.
+
    ```scala
     object MyProgram extends App {
 
@@ -98,7 +103,7 @@ Lorsque vous avez terminé, pressez sur le bouton `Create`. Votre premier projet
     }
    ```
 1. Peut-être que pendant l'écriture du code vous verrez messages d'erreur ou d'attention. Ne vous en inquiétez surtout pas **tant que vous n'avez pas terminé**. En effet, l'environnement de développement[^1] appelle en permanence le compilateur sur votre code pour vous aider à trouver d'éventuelles erreurs ou problèmes mais cela risque surtout de vous stresser au début. 
-1. Exécutez maintenant votre programme
+1. Exécutez maintenant votre programme :
    1. Cliquez sur la flèche verte à gauche de la ligne contenant `objet MyProgram`.
    1. Vous verrez alors le résultat de votre programme affiché sur la console (la fenêtre au fond de l'écran), à savoir `The sum is equal to : 7`.
    1. Expérimentez en changeant le programme pour avoir une multiplication plutôt qu'une somme. Essayez également de modifier les chiffres pour voir ce qui se passe.
@@ -110,9 +115,9 @@ Comme vous l'avez constaté, il est possible d'avoir plusieurs fichiers _Scala_ 
 
 > Le dossier `src` dans un vrai projet comporte en général beaucoup de fichiers différents dans lesquels on range les différentes choses que l'on veut faire. Certains de ces fichiers peuvent être exécutés grâce à la petite flèche verte ou au menu `Run`. Nous verrons comment spécifier quels fichiers sont exécutables et ce qui les rend spécial dans un prochain labo.
 
-1. Copiez les fichiers `RoomCalc.scala` et `Input.scala` dans le même répertoire que votre fichier`MyProgram.scala`
-1. Regardez maintenant dans l’explorateur de projet pour vérifier que `RoomCalc.scala` et `Input.scala` sont bien ajoutés dans les fichiers source (`src`) de votre projet. 
-1. Vous pouvez exécuter le programme `RoomCalc.scala` en cliquant avec le bouton droit sur le fichier `RoomCalc.scala` dans l’explorateur à gauche et en sélectionnant `Run ``RoomCalc```.
+1. Copiez les fichiers `RoomCalc.scala` et `Input.scala` dans le même répertoire que votre fichier `MyProgram.scala`
+1. Regardez maintenant dans l’explorateur de projet pour vérifier que `RoomCalc.scala` et `Input.scala` sont bien ajoutés dans les fichiers source `src` de votre projet. 
+1. Vous pouvez exécuter le programme `RoomCalc.scala` en cliquant avec le bouton droit sur le fichier `RoomCalc.scala` dans l’explorateur à gauche et en sélectionnant `Run "RoomCalc"`.
 1. Vous pouvez ensuite cliquer dans la console et entrer les valeurs demandées.
 1. Essayez de comprendre ce qui se passe dans le fichier. Bien que nous n’ayons pas vu ces éléments ensemble, vous ne pouvez pas encore comprendre toutes les finesses mais essayez d’imaginer à quoi peuvent server les différents éléments du programme.
 1) Modifiez le fichier afin :
@@ -124,7 +129,7 @@ Comme vous l'avez constaté, il est possible d'avoir plusieurs fichiers _Scala_ 
 1. Ajoutez une nouvelle classe à votre projet (`File -> New Class`) que vous nommerez `Fuel`.
 2. En vous inspirant de l’exemple ci-dessus, faites un programme permettant de calculer votre consommation d’essence sur une certaine distance. Un exemple possible de ce qui est attendu pourrait-être :
 
-   ```scala
+   ```
    Liters / 100 km : 12
    Distance driven : 10
    You used : 1.2 liters of fuel.
@@ -132,11 +137,11 @@ Comme vous l'avez constaté, il est possible d'avoir plusieurs fichiers _Scala_ 
 
 ## Tâche 5 – Flottaison d'une sphère
 
-Nous voudrions écrire un programme qui permet de déterminer si une sphère en métal creuse flotte si on la plonge dans l'eau. Il doit être possible de choisir la matière qui compose la sphère, l'utilisateur devra donc saisir la masse volumique de cette matière (à titre d'exemple, la masse volumique de l'aluminium est de $2.6~[g/cm^3]$).
+Nous voudrions écrire un programme qui permet de déterminer si une sphère en métal creuse flotte si on la plonge dans l'eau. 
 
-L'utilisateur doit donc saisir le **rayon** de la sphère (ici le rayon extérieur), **l'épaisseur de la surface** et la **masse volumique** du matériau utilisé. 
+Ce programme doit être interactif, ce qui signifie que la personne utilisant le logiciel doit pouvoir entrer les différentes valeurs au clavier. Il doit être possible de spécifier le **rayon** de la sphère (ici le rayon extérieur), **l'épaisseur de la surface** et la **masse volumique** du matériau utilisé. À titre d'exemple, la masse volumique de l'aluminium est de $2.6~[g/cm^3]$.
 
-À partir de ces données, **calculez le volume intérieur de la sphère** ainsi que la **masse de la sphère creuse**. Si le rapport entre la masse et le volume est inférieur à 1, on peut considérer que l'objet flotte. Un exemple d'exécution nous donnerait :
+À partir de ces données, **calculez le volume intérieur de la sphère** ainsi que la **masse de la sphère creuse**. Si le rapport entre la masse et le volume est inférieur à 1, on peut considérer que l'objet flotte. Un exemple d'exécution de ce programme est reproduit ci-dessous :
 
 ```
 Please enter outer sphere radius (in cm): 15
@@ -148,7 +153,7 @@ Total object density: 0.37392592592592594 => The object is floating
 
 ## Tâche 6 -- Quiz
 
-Allez sur la page web du cours et complétez le premier quiz si vous ne l'avez pas encore fait. N'hésitez pas également à commenter le cours si vous avez vu des choses à modifier ! Merci
+Allez sur la page web du cours et complétez le premier quiz si vous ne l'avez pas encore fait. N'hésitez pas également à mettre des commentaires dans le cours si vous avez vu des choses à modifier ! Merci
 
 <!-- <y> Je sais pas vraiment s'il faut installer les outils command line ou pas... J'hésite franchement.</y>
 
